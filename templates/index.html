@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Para o amor da minha vida 💖</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="text-center bg-pink-200">
+    <h1 class="text-3xl text-pink-500 font-mono font-semibold ">Feliz aniversário meu amor </h1>
+    <div class="w-full max-w-5xl mx-auto py-8">
+        <!-- Container do carrossel -->
+        <div class="relative" id="carousel">
+
+        <!-- Slide 1 -->
+        <div class="slide flex justify-center gap-4 transition-all duration-500 ease-in-out">
+            <img src="{{ url_for('static', filename='images/foto1.jpeg') }}" class="w-48 h-64 object-cover rounded-lg border-4 border-pink-300" />
+            <img src="{{ url_for('static', filename='images/foto2.jpeg') }}" class="w-48 h-64 object-cover rounded-lg border-4 border-pink-300" />
+            <img src="{{ url_for('static', filename='images/foto3.jpeg') }}" class="w-48 h-64 object-cover rounded-lg border-4 border-pink-300" />
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide hidden flex justify-center gap-4 transition-all duration-500 ease-in-out">
+            <img src="{{ url_for('static', filename='images/foto4.jpeg') }}" class="w-48 h-64 object-cover rounded-lg border-4 border-pink-300" />
+            <img src="{{ url_for('static', filename='images/foto5.jpeg') }}" class="w-48 h-64 object-cover rounded-lg border-4 border-pink-300" />
+            <img src="{{ url_for('static', filename='images/foto6.jpeg') }}" class="w-48 h-64 object-cover rounded-lg border-4 border-pink-300" />
+        </div>
+    
+        <!-- Botões -->
+        <div class="absolute inset-y-1/2 left-0 flex items-center">
+            <button onclick="prevSlide()" class="text-3xl px-2 text-pink-500 hover:text-pink-700">&#10094;</button>
+        </div>
+        <div class="absolute inset-y-1/2 right-0 flex items-center">
+            <button onclick="nextSlide()" class="text-3xl px-2 text-pink-500 hover:text-pink-700">&#10095;</button>
+        </div>
+
+        </div>
+    </div> 
+    
+<script>
+    let current = 0;
+    const slides = document.querySelectorAll('#carousel .slide');
+    
+    function showSlide(index) {
+        slides.forEach((s, i) => {
+        s.classList.toggle('hidden', i !== index);
+        });
+    }
+    
+    function nextSlide() {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+    }
+    
+    function prevSlide() {
+        current = (current - 1 + slides.length) % slides.length;
+        showSlide(current);
+    }
+    
+    // Mostra o primeiro slide ao carregar
+    showSlide(current);
+</script>
+</body>
+</html>
