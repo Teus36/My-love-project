@@ -131,6 +131,27 @@
     }
 
     updateSlide();
+    
+    setInterval(() => {
+        nextSlide();
+    }, 5000);
+
+    let startX = 0;
+
+    wrapper.addEventListener("touchstart", (e) => {
+        startX = e.touches[0].clientX;
+    });
+
+    wrapper.addEventListener("touchend", (e) => {
+        const endX = e.changedTouches[0].clientX;
+        const diff = startX - endX;
+
+        if (diff > 50) {
+            nextSlide(); // arrastou pra esquerda
+        } else if (diff < -50) {
+            prevSlide(); // arrastou pra direita
+        }
+    });
 </script>
 </body>
 </html>
