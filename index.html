@@ -2,6 +2,9 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
     <title>Para o amor da minha vida 💖</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -16,8 +19,6 @@
 
         .coracao {
         position: absolute;
-        font-size: 1.5rem;
-        color: #E01E38; 
         animation: fall linear;
         }
 
@@ -27,13 +28,13 @@
                 opacity: 1;
             }
             100% {
-                transform: translateY(100vh) rotate(360deg);
+                transform: translateY(100vh) rotate(420deg);
                 opacity: 0;
             }
         }
     </style>
 </head>
-<body class="text-center bg-red-200">
+<body class="text-center bg-pink-200">
     <div id="heart-rain" class="fixed w-full h-full pointer-events-none z-0"></div>
     <div class="flex flex-col items-start w-full max-w-5xl mx-auto overflow-hidden relative" id="carousel">
         <div class="relative w-full flex items-center justify-start mt-12 mb-12">
@@ -192,29 +193,32 @@ wrapper.addEventListener("touchend", (e) => {
 const rain = document.getElementById('heart-rain');
 
 function createHeart() {
-    // Criação
     const heart = document.createElement('div');
     heart.classList.add('coracao');
-    heart.innerHTML = '💗';
 
-    // Onde serão gerados
+    // Criação da imagem
+    const img = document.createElement('img');
+    img.src = 'images/coracao.png';
+    img.style.width = '32px';
+    img.style.height = '32px';
+
+    heart.appendChild(img);
+
+    // Posição e duração
     heart.style.left = Math.random() * 100 + 'vw';
-
-    // Duração
     const duracao = 3 + Math.random() * 2;
     heart.style.animationDuration = duracao + 's';
 
-    // Adicionando dentro da div heart-rain
-    rain.appendChild(heart)
+    rain.appendChild(heart);
 
     setTimeout(() => {
         rain.removeChild(heart);
-        }, duracao * 1000);
+    }, duracao * 1000);
 }
 
 rain.style.height = window.innerHeight + 'px';
 rain.style.width = window.innerWidth + 'px';
-setInterval(createHeart, 80);
+setInterval(createHeart, 100);
 
 </script>
 </body>
