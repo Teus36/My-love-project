@@ -6,158 +6,216 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>   
-</head>
-<body class="text-center bg-pink-100">
-        <div class="bg-white w-[92%] h-[50%] mt-5 rounded-lg mx-auto p-8">
-            <p class="texto-caderno text-gray-700 text-left text-lg">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad repudiandae eum voluptatibus fugit adipisci vitae animi magni numquam, ut reprehenderit nihil, sed quisquam aut, pariatur quis veritatis similique minima qui?
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores, laboriosam? Illum, dolore quas quam maxime, pariatur officiis repudiandae reiciendis accusamus earum placeat enim ab odio cumque accusantium illo dicta esse.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt accusamus iure dignissimos enim exercitationem dolores, numquam deserunt delectus voluptatem, provident molestias perferendis assumenda tempore ipsam officia voluptas omnis dolore voluptate.
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor eligendi earum iure provident culpa impedit eveniet laborum saepe nobis fuga necessitatibus, cumque officiis officia inventore explicabo error sequi quisquam possimus!
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque esse beatae veritatis repudiandae eos maxime, ab, fuga dolores aliquid ducimus tempora alias nam sit, doloribus eius quod corporis blanditiis distinctio?ê se tornou uma das pessoas mais especiais para mim, minha primeira namorada, minha melhor amiga, a pessoa com quem perdi minha virgindade, minha motivação para querer ser uma pessoa melhor.
-            </p>
-        </div>
-        <div class="flex flex-col items-start w-full max-w-5xl mx-auto overflow-hidden relative" id="carousel">
-            <div class="relative w-full flex items-center justify-center mt-16 mb-12">
-                <!-- folha atrás -->
-                <img src="images/folha_caderno.png" alt="Folha de caderno rasgada"
-                    class="absolute w-72 h-56 opacity-80" />
-            
-                <!-- texto na frente -->
-                <h1 class="relative z-10 text-pink-600 text-2xl font-semibold">
-                    Mural de fotos 
-                    <i class="fa-solid fa-heart text-pink-600 text-2xl"></i>
-                </h1>
-            </div>
-            
-            <!-- Wrapper que será movido -->
-            <div id="carouselWrapper" class="flex transition-transform duration-500 mt-12 ease-in-out">
-                
-                <!-- Slide 1 -->
-                <div class="min-w-full flex justify-center gap-4">
-                    <div class="w-[30%] h-[75%] bg-white flex flex-col items-center border-x-[10px] border-t-[10px] border-b-[30px] border-white shadow-md">
-                        <!-- Parte da foto -->
-                        <img src="images/foto1.jpeg" alt="Foto 1" class="w-full h-[85%] object-cover"/>
-                        <!-- Detalhe de coração -->
-                        <div class="h-[15%] flex items-center justify-center text-2xl">
-                            <img src="images/detalhe_coracao.png" alt="detalhe" class=" mt-[30px] w-[110%] h-[110%]">
-                        </div>
-                    </div>
-                    <div class="w-[30%] h-[75%] bg-white flex flex-col items-center border-x-[10px] border-t-[10px] border-b-[30px] border-white shadow-md">
-                        <!-- Parte da foto -->
-                        <img src="images/foto2.jpeg" alt="Foto 2" class="w-full h-[85%] object-cover" />
-                        <!-- Detalhe de coração -->
-                        <div class="h-[15%] flex items-center justify-center text-2xl">
-                            <img src="images/detalhe_coracao.png" alt="detalhe" class=" mt-[30px] w-[110%] h-[110%]">
-                        </div>
-                    </div>
-                    <div class="w-[30%] h-[75%] bg-white flex flex-col items-center border-x-[10px] border-t-[10px] border-b-[30px] border-white shadow-md">
-                        <!-- Parte da foto -->
-                        <img src="images/foto3.jpeg" alt="Foto 3" class="w-full h-[85%] object-cover" />
-                        <!-- Detalhe de coração -->
-                        <div class="h-[15%] flex items-center justify-center text-2xl">
-                            <img src="images/detalhe_coracao.png" alt="detalhe" class=" mt-[30px] w-[110%] h-[110%]">
-                        </div>
-                    </div>
-                </div>
-            
-                <!-- Slide 2 -->
-                <div class="min-w-full flex justify-center gap-4">
-                    <div class="w-[30%] h-[75%] bg-white flex flex-col items-center border-x-[10px] border-t-[10px] border-b-[30px] border-white shadow-md">
-                        <!-- Parte da foto -->
-                        <img src="images/foto4.jpeg" alt="Foto 4" class="w-full h-[85%] object-cover" />
-                        <!-- Detalhe de coração -->
-                        <div class="h-[15%] flex items-center justify-center text-2xl">
-                            <img src="images/detalhe_coracao.png" alt="detalhe" class=" mt-[30px] w-[110%] h-[110%]">
-                        </div>
-                    </div>
-                    <div class="w-[30%] h-[75%] bg-white flex flex-col items-center border-x-[10px] border-t-[10px] border-b-[30px] border-white shadow-md">
-                        <!-- Parte da foto -->
-                        <img src="images/foto5.jpeg" alt="Foto 5" class="w-full h-[85%] object-cover" />
-                        <!-- Detalhe de coração -->
-                        <div class="h-[15%] flex items-center justify-center text-2xl">
-                            <img src="images/detalhe_coracao.png" alt="detalhe" class=" mt-[30px] w-[110%] h-[110%]">
-                        </div>
-                    </div>
-                    <div class="w-[30%] h-[75%] bg-white flex flex-col items-center border-x-[10px] border-t-[10px] border-b-[30px] border-white shadow-md">
-                        <!-- Parte da foto -->
-                        <img src="images/foto6.jpeg" alt="Foto 6" class="w-full h-[85%] object-cover" />
-                        <!-- Detalhe de coração -->
-                        <div class="h-[15%] flex items-center justify-center text-2xl">
-                            <img src="images/detalhe_coracao.png" alt="detalhe" class=" mt-[30px] w-[110%] h-[110%]">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Slide 3-->
-                <div class="min-w-full flex justify-center gap-4">
-                    <div class="w-[30%] h-[75%] bg-white flex flex-col items-center border-x-[10px] border-t-[10px] border-b-[30px] border-white shadow-md">
-                        <!-- Parte da foto -->
-                        <img src="images/foto7.jpeg" alt="Foto 7" class="w-full h-[85%] object-cover" />
-                        <!-- Detalhe de coração -->
-                        <div class="h-[15%] flex items-center justify-center text-2xl">
-                            <img src="images/detalhe_coracao.png" alt="detalhe" class=" mt-[30px] w-[110%] h-[110%]">
-                        </div>
-                    </div>
-                    <div class="w-[30%] h-[75%] bg-white flex flex-col items-center border-x-[10px] border-t-[10px] border-b-[30px] border-white shadow-md">
-                        <!-- Parte da foto -->
-                        <img src="images/foto8.jpeg" alt="Foto 8" class="w-full h-[85%] object-cover" />
-                        <!-- Detalhe de coração -->
-                        <div class="h-[15%] flex items-center justify-center text-2xl">
-                            <img src="images/detalhe_coracao.png" alt="detalhe" class=" mt-[30px] w-[110%] h-[110%]">
-                        </div>
-                    </div>
-                    <div class="w-[30%] h-[75%] bg-white flex flex-col items-center border-x-[10px] border-t-[10px] border-b-[30px] border-white shadow-md">
-                        <!-- Parte da foto -->
-                        <img src="images/foto9.jpeg" alt="Foto 9" class="w-full h-[85%] object-cover" />
-                        <!-- Detalhe de coração -->
-                        <div class="h-[15%] flex items-center justify-center text-2xl">
-                            <img src="images/detalhe_coracao.png" alt="detalhe" class=" mt-[30px] w-[110%] h-[110%]">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>  
-
-<script>
-    let current = 0;
-    const wrapper = document.getElementById('carouselWrapper');
-    const totalSlides = wrapper.children.length;
-
-    function updateSlide() {
-    const offset = -current * 100;
-    wrapper.style.transform = `translateX(${offset}%)`;
-    }
-
-    function nextSlide() {
-        current = (current + 1) % totalSlides;
-        updateSlide();
-    }
-
-    function prevSlide() {
-        current = (current - 1 + totalSlides) % totalSlides;
-        updateSlide();
-    }
-
-    updateSlide();
-
-    let startX = 0;
-
-    wrapper.addEventListener("touchstart", (e) => {
-        startX = e.touches[0].clientX;
-    });
-
-    wrapper.addEventListener("touchend", (e) => {
-        const endX = e.changedTouches[0].clientX;
-        const diff = startX - endX;
-
-        if (diff > 50) {
-            nextSlide(); 
-        } else if (diff < -50) {
-            prevSlide(); 
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
         }
-    });
+
+        .coracao {
+        position: absolute;
+        font-size: 1.5rem;
+        color: #E01E38; 
+        animation: fall linear;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body class="text-center bg-red-200">
+    <div id="heart-rain" class="fixed w-full h-full pointer-events-none z-0"></div>
+    <div class="flex flex-col items-start w-full max-w-5xl mx-auto overflow-hidden relative" id="carousel">
+        <div class="relative w-full flex items-center justify-start mt-12 mb-12">
+            <!-- folha atrás -->
+            <img src="images/folha_caderno.png" alt="Folha de caderno rasgada"
+                class="absolute w-72 ml-5 h-56 opacity-80"/>
+        
+            <!-- texto na frente -->
+            <h1 class="relative z-10 ml-[3em] text-red-600 text-2xl font-semibold">
+                Mural de fotos 
+                <i class="fa-solid fa-heart text-red-600 text-2xl"></i>
+            </h1>
+        </div>
+        
+        <!-- Wrapper que será movido -->
+        <div id="carouselWrapper" class="flex transition-transform h-[500px] duration-500 ease-in-out">
+            
+            <!-- Slide 1 -->
+            <div class="min-w-full flex justify-center gap-4">
+                <div class="w-[30%] h-[90%] bg-white flex flex-col items-center border-x-[10px] border-t-[10px] border-b-[30px] border-white shadow-md">
+                    <!-- Parte da foto -->
+                    <img src="images/foto1.jpeg" alt="Foto 1" class="w-full h-[85%] object-cover"/>
+                    <!-- Detalhe de coração -->
+                    <div class="h-[15%] flex items-center justify-center text-2xl">
+                        <img src="images/detalhe_coracao.png" alt="detalhe" class=" mt-[30px] w-[110%] h-[110%]">
+                    </div>
+                </div>
+                <div class="w-[30%] h-[90%] bg-white flex flex-col items-center border-x-[10px] border-t-[10px] border-b-[30px] border-white shadow-md">
+                    <!-- Parte da foto -->
+                    <img src="images/foto2.jpeg" alt="Foto 2" class="w-full h-[85%] object-cover" />
+                    <!-- Detalhe de coração -->
+                    <div class="h-[15%] flex items-center justify-center text-2xl">
+                        <img src="images/detalhe_coracao.png" alt="detalhe" class=" mt-[30px] w-[110%] h-[110%]">
+                    </div>
+                </div>
+                <div class="w-[30%] h-[90%] bg-white flex flex-col items-center border-x-[10px] border-t-[10px] border-b-[30px] border-white shadow-md">
+                    <!-- Parte da foto -->
+                    <img src="images/foto3.jpeg" alt="Foto 3" class="w-full h-[85%] object-cover" />
+                    <!-- Detalhe de coração -->
+                    <div class="h-[15%] flex items-center justify-center text-2xl">
+                        <img src="images/detalhe_coracao.png" alt="detalhe" class=" mt-[30px] w-[110%] h-[110%]">
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Slide 2 -->
+            <div class="min-w-full flex justify-center gap-4">
+                <div class="w-[30%] h-[90%] bg-white flex flex-col items-center border-x-[10px] border-t-[10px] border-b-[30px] border-white shadow-md">
+                    <!-- Parte da foto -->
+                    <img src="images/foto4.jpeg" alt="Foto 4" class="w-full h-[85%] object-cover" />
+                    <!-- Detalhe de coração -->
+                    <div class="h-[15%] flex items-center justify-center text-2xl">
+                        <img src="images/detalhe_coracao.png" alt="detalhe" class=" mt-[30px] w-[110%] h-[110%]">
+                    </div>
+                </div>
+                <div class="w-[30%] h-[90%] bg-white flex flex-col items-center border-x-[10px] border-t-[10px] border-b-[30px] border-white shadow-md">
+                    <!-- Parte da foto -->
+                    <img src="images/foto5.jpeg" alt="Foto 5" class="w-full h-[85%] object-cover" />
+                    <!-- Detalhe de coração -->
+                    <div class="h-[15%] flex items-center justify-center text-2xl">
+                        <img src="images/detalhe_coracao.png" alt="detalhe" class=" mt-[30px] w-[110%] h-[110%]">
+                    </div>
+                </div>
+                <div class="w-[30%] h-[90%] bg-white flex flex-col items-center border-x-[10px] border-t-[10px] border-b-[30px] border-white shadow-md">
+                    <!-- Parte da foto -->
+                    <img src="images/foto6.jpeg" alt="Foto 6" class="w-full h-[85%] object-cover" />
+                    <!-- Detalhe de coração -->
+                    <div class="h-[15%] flex items-center justify-center text-2xl">
+                        <img src="images/detalhe_coracao.png" alt="detalhe" class=" mt-[30px] w-[110%] h-[110%]">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3-->
+            <div class="min-w-full flex justify-center gap-4">
+                <div class="w-[30%] h-[90%] bg-white flex flex-col items-center border-x-[10px] border-t-[10px] border-b-[30px] border-white shadow-md">
+                    <!-- Parte da foto -->
+                    <img src="images/foto7.jpeg" alt="Foto 7" class="w-full h-[85%] object-cover" />
+                    <!-- Detalhe de coração -->
+                    <div class="h-[15%] flex items-center justify-center text-2xl">
+                        <img src="images/detalhe_coracao.png" alt="detalhe" class=" mt-[30px] w-[110%] h-[110%]">
+                    </div>
+                </div>
+                <div class="w-[30%] h-[90%] bg-white flex flex-col items-center border-x-[10px] border-t-[10px] border-b-[30px] border-white shadow-md">
+                    <!-- Parte da foto -->
+                    <img src="images/foto8.jpeg" alt="Foto 8" class="w-full h-[85%] object-cover" />
+                    <!-- Detalhe de coração -->
+                    <div class="h-[15%] flex items-center justify-center text-2xl">
+                        <img src="images/detalhe_coracao.png" alt="detalhe" class=" mt-[30px] w-[110%] h-[110%]">
+                    </div>
+                </div>
+                <div class="w-[30%] h-[90%] bg-white flex flex-col items-center border-x-[10px] border-t-[10px] border-b-[30px] border-white shadow-md">
+                    <!-- Parte da foto -->
+                    <img src="images/foto9.jpeg" alt="Foto 9" class="w-full h-[85%] object-cover" />
+                    <!-- Detalhe de coração -->
+                    <div class="h-[15%] flex items-center justify-center text-2xl">
+                        <img src="images/detalhe_coracao.png" alt="detalhe" class=" mt-[30px] w-[110%] h-[110%]">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-white w-[92%] mb-12 rounded-lg z-10 mx-auto p-8 relative">
+        <div class="notebook-text text-gray-700 text-left text-lg">
+        ㅤㅤDesde a primeira vez em que te vi, fiquei encantado com sua beleza, era como uma flor vermelha destacada em volta de milhares de flores brancas, uma sensação totalmente diferente, tendo em vista a quantidade de tempo preso dentro de casa devido a uma terrível pandemia. Te olhava pelos corredores da mesma forma que o Pequeno Príncipe olhava para sua rosa todos os dias em seu pequenino planeta.
+        <br>
+        ㅤㅤEra um sentimento especial, como se fossemos ter alguma ligação importante no futuro, mal sabia eu o que me aguardava, de início não demos certo, e admito que grande parte da culpa foi minha, mas ao mesmo tempo, sinto que foi necessário para amadurecermos com o tempo. E então no início do ano letivo de 2023, nós reatamos nossos laços, começamos a nos falar novamente e eu sentia que algo tinha mudado, ainda sem confiança depois dos acontecimentos de 2022 não me sentia seguro para dizer que gostava de ti, apesar de que de certa forma eu alimentava este sentimento em meu peito.
+        <br>
+        ㅤㅤCom o passar do tempo, fomos gostando um do outro cada vez mais, até ficarmos pela primeira vez, um dos momentos que mudariam completamente nossa história. Um leque de emoções se abriram pra mim após isso, pensava a todo momento em você e ia para escola com a esperança de te trombar nos corredores a cada vez que saía de sala, tudo que eu mais pensava era em quando iríamos ficar juntos novamente.
+                <br>
+        ㅤㅤApós a passagem desta fase eu senti que estava na hora de finalmente te pedir em namoro, e apesar de não ter sido nenhum pedido tão bonito, eu sentia que eu queria isso o quanto antes, era algo que eu não podia mais guardar pra mim, e pra nossa felicidade, iniciamos o nosso namoro em 16 de agosto de 2023 se tornando assim a nossa data especial, o início do nosso relacionamento que viria a ser tão duradouro.
+        <br>
+        ㅤㅤVocê se tornou uma das pessoas mais especiais para mim, minha primeira namorada, minha melhor amiga, a pessoa com quem perdi minha virgindade, minha motivação para querer ser uma pessoa melhor.
+        </div>
+    </div>
+</div>  
+<script>
+let current = 0;
+const wrapper = document.getElementById('carouselWrapper');
+const totalSlides = wrapper.children.length;
+
+function updateSlide() {
+const offset = -current * 100;
+wrapper.style.transform = `translateX(${offset}%)`;
+}
+
+function nextSlide() {
+    current = (current + 1) % totalSlides;
+    updateSlide();
+}
+
+function prevSlide() {
+    current = (current - 1 + totalSlides) % totalSlides;
+    updateSlide();
+}
+
+updateSlide();
+
+let startX = 0;
+
+wrapper.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+});
+
+wrapper.addEventListener("touchend", (e) => {
+    const endX = e.changedTouches[0].clientX;
+    const diff = startX - endX;
+
+    if (diff > 50) {
+        nextSlide(); 
+    } else if (diff < -50) {
+        prevSlide(); 
+    }
+});
+
+const rain = document.getElementById('heart-rain');
+
+function createHeart() {
+    // Criação
+    const heart = document.createElement('div');
+    heart.classList.add('coracao');
+    heart.innerHTML = '💗';
+
+    // Onde serão gerados
+    heart.style.left = Math.random() * 100 + 'vw';
+
+    // Duração
+    const duracao = 3 + Math.random() * 2;
+    heart.style.animationDuration = duracao + 's';
+
+    // Adicionando dentro da div heart-rain
+    rain.appendChild(heart)
+
+    setTimeout(() => {
+        rain.removeChild(heart);
+        }, duracao * 1000);
+}
+
+rain.style.height = window.innerHeight + 'px';
+rain.style.width = window.innerWidth + 'px';
+setInterval(createHeart, 80);
+
 </script>
 </body>
 </html>
