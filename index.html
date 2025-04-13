@@ -131,26 +131,32 @@
         </div>
     </div>
     <button id="openButton" class="openButton">
-        <img src="images/livro_aberto.png" alt="Abrir modal" class="w-20 h-20">
+        <img src="images/livro_aberto.png" alt="Abrir modal" class="w-36 h-36 z-10 relative">
     </button>
-    <dialog id="modal" class=" bg-transparent bg-blur/100 backdrop:bg-black/30 backdrop:blur-sm rounded-xl border-none p-0 transition-transform ease-linear duration-400 ">
-        <img src="images/crumpled_paper.png" alt="Papel amassado" class="w-[85%] left-[5%] z-10 absolute">
-        <div class="flex flex-col items-end w-[70%] mb-12 rounded-lg z-10 mx-auto p-16 relative">
-            <div class="notebook-text text-gray-700 text-left text-lg font-semibold">
-            ㅤㅤDesde a primeira vez em que te vi, fiquei encantado com sua beleza, era como uma flor vermelha destacada em volta de milhares de flores brancas, uma sensação totalmente diferente, tendo em vista a quantidade de tempo preso dentro de casa devido a uma terrível pandemia. Te olhava pelos corredores da mesma forma que o Pequeno Príncipe olhava para sua rosa todos os dias em seu pequenino planeta.
-            <br>
-            ㅤㅤEra um sentimento especial, como se fossemos ter alguma ligação importante no futuro, mal sabia eu o que me aguardava, de início não demos certo, e admito que grande parte da culpa foi minha, mas ao mesmo tempo, sinto que foi necessário para amadurecermos com o tempo. E então no início do ano letivo de 2023, nós reatamos nossos laços, começamos a nos falar novamente e eu sentia que algo tinha mudado, ainda sem confiança depois dos acontecimentos de 2022 não me sentia seguro para dizer que gostava de ti, apesar de que de certa forma eu alimentava este sentimento em meu peito.
-            <br>
-            ㅤㅤCom o passar do tempo, fomos gostando um do outro cada vez mais, até ficarmos pela primeira vez, um dos momentos que mudariam completamente nossa história. Um leque de emoções se abriram pra mim após isso, pensava a todo momento em você e ia para escola com a esperança de te trombar nos corredores a cada vez que saía de sala, tudo que eu mais pensava era em quando iríamos ficar juntos novamente.
-                    <br>
-            ㅤㅤApós a passagem desta fase eu senti que estava na hora de finalmente te pedir em namoro, e apesar de não ter sido nenhum pedido tão bonito, eu sentia que eu queria isso o quanto antes, era algo que eu não podia mais guardar pra mim, e pra nossa felicidade, iniciamos o nosso namoro em 16 de agosto de 2023 se tornando assim a nossa data especial, o início do nosso relacionamento que viria a ser tão duradouro.
-            <br>
-            ㅤㅤVocê se tornou uma das pessoas mais especiais para mim, minha primeira namorada, minha melhor amiga, a pessoa com quem perdi minha virgindade, minha motivação para querer ser uma pessoa melhor.
+    <dialog id="modal" class=" bg-transparent bg-blur/100 backdrop:bg-black/30 backdrop:blur-sm rounded-xl border-none p-0">
+        <div id="paperWrapper" class="relative w-full flex justify-center items-center">
+            <div class="relative w-[100%] border-black animate-none translate-x-full opacity-0 transition-all duration-500 ease-out" id="animatedPaper">
+                <img src="images/crumpled_paper.png" alt="Papel amassado" class="w-full z-10">
+                <div class="absolute top-0 left-0 w-full h-full flex flex-col items-end mb-12 p-16">
+                    <div class="notebook-text text-gray-700 text-left text-lg font-semibold">
+                        <div class="notebook-text text-gray-700 text-left text-lg inset-36 font-semibold absolute">
+                            ㅤㅤDesde a primeira vez em que te vi, fiquei encantado com sua beleza, era como uma flor vermelha destacada em volta de milhares de flores brancas, uma sensação totalmente diferente, tendo em vista a quantidade de tempo preso dentro de casa devido a uma terrível pandemia. Te olhava pelos corredores da mesma forma que o Pequeno Príncipe olhava para sua rosa todos os dias em seu pequenino planeta.
+                            <br>
+                            ㅤㅤEra um sentimento especial, como se fossemos ter alguma ligação importante no futuro, mal sabia eu o que me aguardava, de início não demos certo, e admito que grande parte da culpa foi minha, mas ao mesmo tempo, sinto que foi necessário para amadurecermos com o tempo. E então no início do ano letivo de 2023, nós reatamos nossos laços, começamos a nos falar novamente e eu sentia que algo tinha mudado, ainda sem confiança depois dos acontecimentos de 2022 não me sentia seguro para dizer que gostava de ti, apesar de que de certa forma eu alimentava este sentimento em meu peito.
+                            <br>
+                            ㅤㅤCom o passar do tempo, fomos gostando um do outro cada vez mais, até ficarmos pela primeira vez, um dos momentos que mudariam completamente nossa história. Um leque de emoções se abriram pra mim após isso, pensava a todo momento em você e ia para escola com a esperança de te trombar nos corredores a cada vez que saía de sala, tudo que eu mais pensava era em quando iríamos ficar juntos novamente.
+                                    <br>
+                            ㅤㅤApós a passagem desta fase eu senti que estava na hora de finalmente te pedir em namoro, e apesar de não ter sido nenhum pedido tão bonito, eu sentia que eu queria isso o quanto antes, era algo que eu não podia mais guardar pra mim, e pra nossa felicidade, iniciamos o nosso namoro em 16 de agosto de 2023 se tornando assim a nossa data especial, o início do nosso relacionamento que viria a ser tão duradouro.
+                            <br>
+                            ㅤㅤVocê se tornou uma das pessoas mais especiais para mim, minha primeira namorada, minha melhor amiga, a pessoa com quem perdi minha virgindade, minha motivação para querer ser uma pessoa melhor.
+                        </div>
+                        <button id="closeButton" class="bottom-0 right-0 absolute">
+                            <img src="images/livro_fechado.png" alt="Fechar modal" class="w-36 h-36">
+                        </button><!-- texto aqui... -->
+                    </div>
+                </div>
             </div>
-            <button id="closeButton" class="">
-                <img src="images/livro_fechado.png" alt="Fechar modal" class="w-20 h-20">
-            </button>
-        </div>
+        </div>        
     </dialog>
 </div>  
 <script>
@@ -225,12 +231,25 @@ const openButton = document.getElementById('openButton')
 const closeButton = document.getElementById('closeButton')
 const modal = document.getElementById('modal')
 
+const animatedPaper = document.getElementById("animatedPaper");
+
 openButton.onclick = function openModal() {
-    modal.showModal()
+    modal.showModal();
+    
+    // Permite que a animação ocorra após o modal abrir
+    setTimeout(() => {
+        animatedPaper.classList.remove("translate-x-full", "opacity-0");
+    }, 100);
 }
 
-closeButton.onclick = function openModal() {
-    modal.close()
+closeButton.onclick = function closeModal() {
+    // Esconde com efeito reverso
+    animatedPaper.classList.add("translate-x-full", "opacity-0");
+
+    // Espera a animação acabar antes de fechar
+    setTimeout(() => {
+        modal.close();
+    }, 500);
 }
 
 </script>
