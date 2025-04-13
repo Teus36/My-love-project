@@ -10,13 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>   
     <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-        }
-
         .coracao {
         position: absolute;
         animation: fall linear;
@@ -28,7 +21,7 @@
                 opacity: 1;
             }
             100% {
-                transform: translateY(100vh) rotate(420deg);
+                transform: translateY(120vh) rotate(360deg);
                 opacity: 0;
             }
         }
@@ -38,11 +31,11 @@
     <div id="heart-rain" class="fixed w-full h-full pointer-events-none z-0"></div>
     <div class="flex flex-col items-start w-full max-w-5xl mx-auto overflow-hidden relative" id="carousel">
         <div class="relative w-full flex items-center justify-start mt-12 mb-12">
-            <!-- folha atrás -->
+            <!-- Folha atrás -->
             <img src="images/folha_caderno.png" alt="Folha de caderno rasgada"
                 class="absolute w-72 ml-5 h-56 opacity-80"/>
         
-            <!-- texto na frente -->
+            <!-- Texto na frente -->
             <h1 class="relative z-10 ml-[3em] text-red-600 text-2xl font-semibold">
                 Mural de fotos 
                 <i class="fa-solid fa-heart text-red-600 text-2xl"></i>
@@ -137,19 +130,28 @@
             </div>
         </div>
     </div>
-    <div class="bg-white w-[92%] mb-12 rounded-lg z-10 mx-auto p-8 relative">
-        <div class="notebook-text text-gray-700 text-left text-lg">
-        ㅤㅤDesde a primeira vez em que te vi, fiquei encantado com sua beleza, era como uma flor vermelha destacada em volta de milhares de flores brancas, uma sensação totalmente diferente, tendo em vista a quantidade de tempo preso dentro de casa devido a uma terrível pandemia. Te olhava pelos corredores da mesma forma que o Pequeno Príncipe olhava para sua rosa todos os dias em seu pequenino planeta.
-        <br>
-        ㅤㅤEra um sentimento especial, como se fossemos ter alguma ligação importante no futuro, mal sabia eu o que me aguardava, de início não demos certo, e admito que grande parte da culpa foi minha, mas ao mesmo tempo, sinto que foi necessário para amadurecermos com o tempo. E então no início do ano letivo de 2023, nós reatamos nossos laços, começamos a nos falar novamente e eu sentia que algo tinha mudado, ainda sem confiança depois dos acontecimentos de 2022 não me sentia seguro para dizer que gostava de ti, apesar de que de certa forma eu alimentava este sentimento em meu peito.
-        <br>
-        ㅤㅤCom o passar do tempo, fomos gostando um do outro cada vez mais, até ficarmos pela primeira vez, um dos momentos que mudariam completamente nossa história. Um leque de emoções se abriram pra mim após isso, pensava a todo momento em você e ia para escola com a esperança de te trombar nos corredores a cada vez que saía de sala, tudo que eu mais pensava era em quando iríamos ficar juntos novamente.
-                <br>
-        ㅤㅤApós a passagem desta fase eu senti que estava na hora de finalmente te pedir em namoro, e apesar de não ter sido nenhum pedido tão bonito, eu sentia que eu queria isso o quanto antes, era algo que eu não podia mais guardar pra mim, e pra nossa felicidade, iniciamos o nosso namoro em 16 de agosto de 2023 se tornando assim a nossa data especial, o início do nosso relacionamento que viria a ser tão duradouro.
-        <br>
-        ㅤㅤVocê se tornou uma das pessoas mais especiais para mim, minha primeira namorada, minha melhor amiga, a pessoa com quem perdi minha virgindade, minha motivação para querer ser uma pessoa melhor.
+    <button id="openButton" class="openButton">
+        <img src="images/livro_aberto.png" alt="Abrir modal" class="w-20 h-20">
+    </button>
+    <dialog id="modal" class=" bg-transparent bg-blur/100 backdrop:bg-black/30 backdrop:blur-sm rounded-xl border-none p-0 transition-transform ease-linear duration-400 ">
+        <img src="images/crumpled_paper.png" alt="Papel amassado" class="w-[85%] left-[5%] z-10 absolute">
+        <div class="flex flex-col items-end w-[70%] mb-12 rounded-lg z-10 mx-auto p-16 relative">
+            <div class="notebook-text text-gray-700 text-left text-lg font-semibold">
+            ㅤㅤDesde a primeira vez em que te vi, fiquei encantado com sua beleza, era como uma flor vermelha destacada em volta de milhares de flores brancas, uma sensação totalmente diferente, tendo em vista a quantidade de tempo preso dentro de casa devido a uma terrível pandemia. Te olhava pelos corredores da mesma forma que o Pequeno Príncipe olhava para sua rosa todos os dias em seu pequenino planeta.
+            <br>
+            ㅤㅤEra um sentimento especial, como se fossemos ter alguma ligação importante no futuro, mal sabia eu o que me aguardava, de início não demos certo, e admito que grande parte da culpa foi minha, mas ao mesmo tempo, sinto que foi necessário para amadurecermos com o tempo. E então no início do ano letivo de 2023, nós reatamos nossos laços, começamos a nos falar novamente e eu sentia que algo tinha mudado, ainda sem confiança depois dos acontecimentos de 2022 não me sentia seguro para dizer que gostava de ti, apesar de que de certa forma eu alimentava este sentimento em meu peito.
+            <br>
+            ㅤㅤCom o passar do tempo, fomos gostando um do outro cada vez mais, até ficarmos pela primeira vez, um dos momentos que mudariam completamente nossa história. Um leque de emoções se abriram pra mim após isso, pensava a todo momento em você e ia para escola com a esperança de te trombar nos corredores a cada vez que saía de sala, tudo que eu mais pensava era em quando iríamos ficar juntos novamente.
+                    <br>
+            ㅤㅤApós a passagem desta fase eu senti que estava na hora de finalmente te pedir em namoro, e apesar de não ter sido nenhum pedido tão bonito, eu sentia que eu queria isso o quanto antes, era algo que eu não podia mais guardar pra mim, e pra nossa felicidade, iniciamos o nosso namoro em 16 de agosto de 2023 se tornando assim a nossa data especial, o início do nosso relacionamento que viria a ser tão duradouro.
+            <br>
+            ㅤㅤVocê se tornou uma das pessoas mais especiais para mim, minha primeira namorada, minha melhor amiga, a pessoa com quem perdi minha virgindade, minha motivação para querer ser uma pessoa melhor.
+            </div>
+            <button id="closeButton" class="">
+                <img src="images/livro_fechado.png" alt="Fechar modal" class="w-20 h-20">
+            </button>
         </div>
-    </div>
+    </dialog>
 </div>  
 <script>
 let current = 0;
@@ -206,7 +208,7 @@ function createHeart() {
 
     // Posição e duração
     heart.style.left = Math.random() * 100 + 'vw';
-    const duracao = 3 + Math.random() * 2;
+    const duracao = 8 + Math.random() * 2;
     heart.style.animationDuration = duracao + 's';
 
     rain.appendChild(heart);
@@ -216,9 +218,20 @@ function createHeart() {
     }, duracao * 1000);
 }
 
-rain.style.height = window.innerHeight + 'px';
-rain.style.width = window.innerWidth + 'px';
 setInterval(createHeart, 100);
+
+
+const openButton = document.getElementById('openButton')
+const closeButton = document.getElementById('closeButton')
+const modal = document.getElementById('modal')
+
+openButton.onclick = function openModal() {
+    modal.showModal()
+}
+
+closeButton.onclick = function openModal() {
+    modal.close()
+}
 
 </script>
 </body>
