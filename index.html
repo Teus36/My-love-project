@@ -130,9 +130,15 @@
             </div>
         </div>
     </div>
-    <button id="openButton" class="openButton">
+    <!-- Contador do namoro -->
+    <div id="contador" class="text-pink-600 text-xl font-semibold text-center"></div>
+
+    <!-- Abrir modal -->
+    <button id="openButton" class="openButton absolute bottom-3 right-3">
         <img src="images/livro_aberto.png" alt="Abrir modal" class="w-36 h-36 z-10 relative">
     </button>
+
+    <!-- Modal com a carta -->
     <dialog id="modal" class=" bg-transparent bg-blur/100 backdrop:bg-black/30 backdrop:blur-sm rounded-xl border-none p-0">
         <div id="paperWrapper" class="relative w-full flex justify-center items-center">
             <div class="relative w-[100%] border-black animate-none translate-x-full opacity-0 transition-all duration-500 ease-out" id="animatedPaper">
@@ -145,14 +151,14 @@
                             ㅤㅤEra um sentimento especial, como se fossemos ter alguma ligação importante no futuro, mal sabia eu o que me aguardava, de início não demos certo, e admito que grande parte da culpa foi minha, mas ao mesmo tempo, sinto que foi necessário para amadurecermos com o tempo. E então no início do ano letivo de 2023, nós reatamos nossos laços, começamos a nos falar novamente e eu sentia que algo tinha mudado, ainda sem confiança depois dos acontecimentos de 2022 não me sentia seguro para dizer que gostava de ti, apesar de que de certa forma eu alimentava este sentimento em meu peito.
                             <br>
                             ㅤㅤCom o passar do tempo, fomos gostando um do outro cada vez mais, até ficarmos pela primeira vez, um dos momentos que mudariam completamente nossa história. Um leque de emoções se abriram pra mim após isso, pensava a todo momento em você e ia para escola com a esperança de te trombar nos corredores a cada vez que saía de sala, tudo que eu mais pensava era em quando iríamos ficar juntos novamente.
-                                    <br>
+                            <br>
                             ㅤㅤApós a passagem desta fase eu senti que estava na hora de finalmente te pedir em namoro, e apesar de não ter sido nenhum pedido tão bonito, eu sentia que eu queria isso o quanto antes, era algo que eu não podia mais guardar pra mim, e pra nossa felicidade, iniciamos o nosso namoro em 16 de agosto de 2023 se tornando assim a nossa data especial, o início do nosso relacionamento que viria a ser tão duradouro.
                             <br>
                             ㅤㅤVocê se tornou uma das pessoas mais especiais para mim, minha primeira namorada, minha melhor amiga, a pessoa com quem perdi minha virgindade, minha motivação para querer ser uma pessoa melhor.
                         </div>
                         <button id="closeButton" class="bottom-0 right-0 absolute">
                             <img src="images/livro_fechado.png" alt="Fechar modal" class="w-36 h-36">
-                        </button><!-- texto aqui... -->
+                        </button>
                     </div>
                 </div>
             </div>
@@ -251,6 +257,37 @@ closeButton.onclick = function closeModal() {
         modal.close();
     }, 500);
 }
+
+const startDating = new Date("2023-08-16T00:00:00");
+
+function timeSince(data) {
+    const now = new Date()
+    const diff = now - data 
+    const time = new Date(diff);
+
+    return {
+        anos: time.getUTCFullYear() - 1970,
+        meses: time.getUTCMonth(),
+        dias: time.getUTCDate() - 1,
+        horas: time.getUTCHours(),
+        minutos: time.getUTCMinutes(),
+        segundos: time.getUTCSeconds()
+    };
+}
+
+// Atualização do contador
+setInterval(() => {
+    const time = timeSince(startDating);
+    document.getElementById("contador").innerText = `
+        Estamos juntos há:
+        ${time.anos} ano(s),
+        ${time.meses} mês(es),
+        ${time.dias} dia(s),
+        ${time.horas} hora(s),
+        ${time.minutos} minuto(s) e
+        ${time.segundos} segundo(s)
+    `;
+}, 1000);
 
 </script>
 </body>
