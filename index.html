@@ -29,8 +29,8 @@
 </head>
 <body class="text-center bg-pink-200">
     <div id="heart-rain" class="fixed w-full h-full pointer-events-none z-0"></div>
-    <div class="flex flex-col items-start w-full max-w-5xl mx-auto overflow-hidden relative" id="carousel">
-        <div class="relative w-full flex items-center justify-start mt-12 mb-12">
+    <div class="flex flex-col w-full max-w-5xl mx-auto overflow-hidden relative" id="carousel">
+        <div class="relative w-full flex items-center justify-start mt-12 mb-10">
             <!-- Folha atrás -->
             <img src="images/folha_caderno.png" alt="Folha de caderno rasgada"
                 class="absolute w-72 ml-5 h-56 opacity-80"/>
@@ -131,7 +131,22 @@
         </div>
     </div>
     <!-- Contador do namoro -->
-    <div id="contador" class="text-pink-600 text-xl font-semibold text-center"></div>
+    <div id="contador" class="text-pink-600 bg-white p-6 rounded w-[70%] mx-auto z-10 relative text-xl font-semibold text-center mt-0 mb-5"></div>
+    
+    <!-- Textinho -->
+    <div class="max-w-xl mx-auto mt-8 p-6 bg-pink-100 border border-pink-300 rounded-2xl shadow-md z-10 relative text-justify text-gray-800 leading-relaxed">
+        <p>
+        Desde o dia em que nos conhecemos, minha vida ficou mais colorida e cheia de amor. Cada momento contigo é especial, e eu só queria te lembrar o quanto você é importante pra mim. 💖
+        </p>
+    </div>
+
+    <!-- Quiz do amor-->
+    <div class="bg-pink-100 z-10 relative p-6 rounded-2xl shadow-xl mt-8 mb-5 max-w-md mx-auto text-center" id="quiz">
+        <h2 class="text-xl font-bold text-pink-700 mb-4">💘 Quiz do Amor</h2>
+        <p class="text-lg font-semibold text-gray-800 mb-4" id="question">Carregando pergunta...</p>
+        <div class="space-y-2" id="options"></div>
+        <p class="mt-4 text-green-600 font-medium animate-pulse hidden" id="message">Mensagem aqui</p>
+    </div>
 
     <!-- Abrir modal -->
     <button id="openButton" class="openButton absolute bottom-3 right-3">
@@ -139,13 +154,14 @@
     </button>
 
     <!-- Modal com a carta -->
-    <dialog id="modal" class=" bg-transparent bg-blur/100 backdrop:bg-black/30 backdrop:blur-sm rounded-xl border-none p-0">
+    <dialog id="modal" class="bg-transparent bg-blur/100 backdrop:bg-black/30 backdrop:blur-sm rounded-xl border-none p-0">
         <div id="paperWrapper" class="relative w-full flex justify-center items-center">
             <div class="relative w-[100%] border-black animate-none translate-x-full opacity-0 transition-all duration-500 ease-out" id="animatedPaper">
                 <img src="images/crumpled_paper.png" alt="Papel amassado" class="w-full z-10">
-                <div class="absolute top-0 left-0 w-full h-full flex flex-col items-end mb-12 p-16">
-                    <div class="notebook-text text-gray-700 text-left text-lg font-semibold">
-                        <div class="notebook-text text-gray-700 text-left text-lg inset-36 font-semibold absolute">
+                <div class="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center mb-12 px-10 py-16">
+                    <div class="text-gray-700 text-lg font-semibold text-center ml-16 p-10 max-w-3xl">
+                        <h1 class="text-4xl font-bold mb-6">❤ Minha história de amor ❤</h1>
+                        <p class="text-justify">
                             ㅤㅤDesde a primeira vez em que te vi, fiquei encantado com sua beleza, era como uma flor vermelha destacada em volta de milhares de flores brancas, uma sensação totalmente diferente, tendo em vista a quantidade de tempo preso dentro de casa devido a uma terrível pandemia. Te olhava pelos corredores da mesma forma que o Pequeno Príncipe olhava para sua rosa todos os dias em seu pequenino planeta.
                             <br>
                             ㅤㅤEra um sentimento especial, como se fossemos ter alguma ligação importante no futuro, mal sabia eu o que me aguardava, de início não demos certo, e admito que grande parte da culpa foi minha, mas ao mesmo tempo, sinto que foi necessário para amadurecermos com o tempo. E então no início do ano letivo de 2023, nós reatamos nossos laços, começamos a nos falar novamente e eu sentia que algo tinha mudado, ainda sem confiança depois dos acontecimentos de 2022 não me sentia seguro para dizer que gostava de ti, apesar de que de certa forma eu alimentava este sentimento em meu peito.
@@ -154,12 +170,12 @@
                             <br>
                             ㅤㅤApós a passagem desta fase eu senti que estava na hora de finalmente te pedir em namoro, e apesar de não ter sido nenhum pedido tão bonito, eu sentia que eu queria isso o quanto antes, era algo que eu não podia mais guardar pra mim, e pra nossa felicidade, iniciamos o nosso namoro em 16 de agosto de 2023 se tornando assim a nossa data especial, o início do nosso relacionamento que viria a ser tão duradouro.
                             <br>
-                            ㅤㅤVocê se tornou uma das pessoas mais especiais para mim, minha primeira namorada, minha melhor amiga, a pessoa com quem perdi minha virgindade, minha motivação para querer ser uma pessoa melhor.
-                        </div>
-                        <button id="closeButton" class="bottom-0 right-0 absolute">
-                            <img src="images/livro_fechado.png" alt="Fechar modal" class="w-36 h-36">
-                        </button>
+                            ㅤㅤVocê se tornou uma das pessoas mais especiais para mim, minha primeira namorada, minha melhor amiga, a pessoa com quem perdi minha virgindade, minha motivação para querer ser uma pessoa melhor. Enfrentamos diversos desafios durante nosso relacionamento e fomos aprendendo com nossos erros a nos amar da melhor forma possível, agradeço por todos esse tempo em que esteve comigo, e aguardo ansiosamente pelo futuro da nossa história que com certeza vai durar mais ainda.
+                        </p>
                     </div>
+                    <button id="closeButton" class="absolute bottom-0 right-0 mt-6">
+                        <img src="images/livro_fechado.png" alt="Fechar modal" class="w-36 h-36">
+                    </button>
                 </div>
             </div>
         </div>        
@@ -278,16 +294,80 @@ function timeSince(data) {
 // Atualização do contador
 setInterval(() => {
     const time = timeSince(startDating);
-    document.getElementById("contador").innerText = `
-        Estamos juntos há:
-        ${time.anos} ano(s),
-        ${time.meses} mês(es),
-        ${time.dias} dia(s),
-        ${time.horas} hora(s),
-        ${time.minutos} minuto(s) e
-        ${time.segundos} segundo(s)
-    `;
+    document.getElementById("contador").innerText = `Estamos juntos há: ${time.anos} ano(s), ${time.meses} mês(es), ${time.dias} dia(s), ${time.horas} hora(s), ${time.minutos} minuto(s) e ${time.segundos} segundo(s)`;
 }, 1000);
+
+const quizData = [
+    {
+    question: "Qual foi nosso primeiro rolê juntos só nós dois?",
+    options: ["Cinema", "Ilha de Santana", "Centro de Caicó", "Rei da pizza"],
+    answer: "Ilha de Santana",
+    message: "Foi um dia inesquecível!",
+},
+{
+    question: "Qual é o nosso lugar favorito?",
+    options: ["Art Burguer", "Rei da Pizza", "Ilha de Santana", "Slup"],
+    answer: "Art Burguer",
+    message: "Amamos comer hambuigui. 🍔",
+},
+{
+    question: "Qual mês começamos a namorar?",
+    options: ["Janeiro", "Abril", "Agosto", "Setembro"],
+    answer: "Agosto",
+    message: "Nosso mês especial!! 🌸💘",
+},
+{
+    question: "Qual a minha cor favorita?",
+    options: ["Azul", "Vermelho", "Verde", "Rosa"],
+    answer: "Azul",
+    message: "AZUL !!! 💙💙💙💙💙",
+},  
+{
+    question: "Qual a experiência de namorar comigo?",
+    options: ["Perfeita", "Sensacional", "Incrível", "Excelente"],
+    answer: "all",
+    message: "Todas certas, sou o melhor namorado que existe !!! 😎😝😝",
+},
+
+];
+
+let current_quiz = 0;
+const questionEl = document.getElementById("question");
+const optionsEl = document.getElementById("options");
+const messageEl = document.getElementById("message");
+
+function showQuestion() {
+const quiz = quizData[current_quiz];
+questionEl.textContent = quiz.question;
+optionsEl.innerHTML = "";
+
+quiz.options.forEach((option) => {
+    const btn = document.createElement("button");
+    btn.textContent = option;
+    btn.className = "bg-white w-full text-pink-700 border-2 border-pink-300 hover:bg-pink-200 py-2 px-4 rounded-xl transition duration-300";
+    btn.onclick = () => handleAnswer(option);
+    optionsEl.appendChild(btn);
+});
+}
+
+function handleAnswer(option) {
+const quiz = quizData[current_quiz];
+const isCorrect = quiz.answer === "all" || option === quiz.answer;
+
+if (isCorrect) {
+    messageEl.textContent = quiz.message;
+    messageEl.classList.remove("hidden");
+    setTimeout(() => {
+        messageEl.classList.add("hidden");
+        current_quiz = (current_quiz + 1) % quizData.length;
+        showQuestion();
+    }, 3000);
+} else {
+    alert("Hmmm... tenta de novo! 😅");
+}
+}
+
+showQuestion();
 
 </script>
 </body>
